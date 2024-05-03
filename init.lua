@@ -924,8 +924,10 @@ require('lazy').setup({
   require 'kickstart.plugins.template-string',
   require 'kickstart.plugins.auto-session',
   require 'kickstart.plugins.neo-tree',
+
   require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
   require 'kickstart.plugins.neogit',
+  require 'kickstart.plugins.git-blame', -- for getting the remote link
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   --    This is the easiest way to modularize your config.
