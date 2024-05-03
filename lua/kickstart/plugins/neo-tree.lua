@@ -11,13 +11,22 @@ return {
   },
   cmd = 'Neotree',
   keys = {
-    { '\\', ':Neotree reveal<CR>', { desc = 'NeoTree reveal' } },
+    { '<C-b>', ':Neotree reveal<CR>', { desc = 'NeoTree reveal' } },
   },
   opts = {
+    window = {
+      width = 30,
+    },
     filesystem = {
+      follow_current_file = {
+        enabled = true,
+      },
+      filtered_items = {
+        hide_dotfiles = false,
+      },
       window = {
         mappings = {
-          ['\\'] = 'close_window',
+          ['<C-b>'] = 'close_window',
         },
       },
     },
