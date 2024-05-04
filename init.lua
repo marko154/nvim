@@ -603,8 +603,7 @@ require('lazy').setup({
         --
         -- But for many setups, the LSP (`tsserver`) will work just fine
         -- tsserver = {},
-        eslint_d = {},
-        --
+
         lua_ls = {
           -- cmd = {...},
           -- filetypes = { ...},
@@ -636,6 +635,7 @@ require('lazy').setup({
         'stylua', -- Used to format Lua code
         'tailwindcss-language-server',
         'prettierd',
+        'eslint-lsp', -- if this is too slow, use eslint_d with https://github.com/nvimtools/none-ls.nvim
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
@@ -931,7 +931,7 @@ require('lazy').setup({
   --  Uncomment any of the lines below to enable them (you will need to restart nvim).
   --
   -- require 'kickstart.plugins.debug',
-  -- require 'kickstart.plugins.lint',
+  require 'kickstart.plugins.lint',
   require 'kickstart.plugins.autopairs',
   require 'kickstart.plugins.url-open',
   require 'kickstart.plugins.nvim-ts-autotag',
