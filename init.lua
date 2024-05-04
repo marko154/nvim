@@ -924,6 +924,7 @@ require('lazy').setup({
   require 'kickstart.plugins.template-string',
   require 'kickstart.plugins.auto-session',
   require 'kickstart.plugins.neo-tree',
+  require 'kickstart.plugins.barbar',
 
   require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
   require 'kickstart.plugins.neogit',
