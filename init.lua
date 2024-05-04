@@ -602,7 +602,8 @@ require('lazy').setup({
         --    https://github.com/pmizio/typescript-tools.nvim
         --
         -- But for many setups, the LSP (`tsserver`) will work just fine
-        tsserver = {},
+        -- tsserver = {},
+        eslint_d = {},
         --
         lua_ls = {
           -- cmd = {...},
@@ -651,6 +652,11 @@ require('lazy').setup({
         },
       }
     end,
+  },
+  {
+    'pmizio/typescript-tools.nvim',
+    dependencies = { 'nvim-lua/plenary.nvim', 'neovim/nvim-lspconfig' },
+    opts = {},
   },
 
   { -- Autoformat
@@ -936,6 +942,7 @@ require('lazy').setup({
   require 'kickstart.plugins.auto-session',
   require 'kickstart.plugins.neo-tree',
   require 'kickstart.plugins.barbar',
+  require 'kickstart.plugins.nvim-lsp-file-operations', -- update imports on file rename
 
   require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
   require 'kickstart.plugins.neogit',
