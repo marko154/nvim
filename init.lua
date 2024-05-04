@@ -636,6 +636,7 @@ require('lazy').setup({
         'tailwindcss-language-server',
         'prettierd',
         'eslint-lsp', -- if this is too slow, use eslint_d with https://github.com/nvimtools/none-ls.nvim
+        'sonarlint-language-server',
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
