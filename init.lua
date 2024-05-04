@@ -634,6 +634,7 @@ require('lazy').setup({
       vim.list_extend(ensure_installed, {
         'stylua', -- Used to format Lua code
         'tailwindcss-language-server',
+        'css-lsp',
         'prettierd',
         'eslint-lsp', -- if this is too slow, use eslint_d with https://github.com/nvimtools/none-ls.nvim
         'sonarlint-language-server',
