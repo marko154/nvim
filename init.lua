@@ -595,6 +595,8 @@ require('lazy').setup({
         clangd = {},
         gopls = {},
         pyright = {},
+        html = {},
+        dockerls = {},
         -- rust_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
@@ -697,6 +699,8 @@ require('lazy').setup({
         javascriptreact = { { 'prettierd', 'prettier' } },
         typescript = { { 'prettierd', 'prettier' } },
         typescriptreact = { { 'prettierd', 'prettier' } },
+        html = { { 'prettierd', 'prettier' } },
+        css = { { 'prettierd', 'prettier' } },
         go = { 'goimports', 'gofmt' },
       },
     },
