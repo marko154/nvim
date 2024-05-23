@@ -21,7 +21,7 @@
 =====================================================================
 
 What is Kickstart?
-
+ 
   Kickstart.nvim is *not* a distribution.
 
   Kickstart.nvim is a starting point for your own configuration.
@@ -156,6 +156,9 @@ vim.opt.cursorline = true
 
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
+
+-- For non ugly diffs
+vim.opt.fillchars:append { diff = ' ' }
 
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
@@ -406,6 +409,7 @@ require('lazy').setup({
       vim.keymap.set('n', '<leader>fs', builtin.builtin, { desc = '[F]ind [S]elect Telescope' })
       vim.keymap.set('n', '<leader>fw', builtin.grep_string, { desc = '[F]ind current [W]ord' })
       vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = '[F]ind by [G]rep' })
+      vim.keymap.set('n', '<leader>fb', ':Telescope git_branches<CR>', { desc = '[F]ind [B]ranch' })
       vim.keymap.set('n', '<leader>fd', builtin.diagnostics, { desc = '[F]ind [D]iagnostics' })
       vim.keymap.set('n', '<leader>fr', builtin.resume, { desc = '[F]ind [R]esume' })
       vim.keymap.set('n', '<leader>f.', builtin.oldfiles, { desc = '[F]ind Recent Files ("." for repeat)' })
@@ -513,7 +517,7 @@ require('lazy').setup({
 
           -- Fuzzy find all the symbols in your current document.
           --  Symbols are things like variables, functions, types, etc.
-          map('<leader>ds', require('telescope.builtin').lsp_document_symbols, '[D]ocument [S]ymbols')
+          map('gs', require('telescope.builtin').lsp_document_symbols, '[D]ocument [S]ymbols')
 
           -- Fuzzy find all the symbols in your current workspace.
           --  Similar to document symbols, except searches over your entire project.
@@ -948,7 +952,7 @@ require('lazy').setup({
   require 'kickstart.plugins.template-string',
   require 'kickstart.plugins.auto-session',
   require 'kickstart.plugins.neo-tree',
-  require 'kickstart.plugins.barbar',
+  require 'kickstart.plugins.harpoon',
   require 'kickstart.plugins.nvim-lsp-file-operations', -- update imports on file rename
 
   require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps

@@ -9,7 +9,7 @@ return {
     'nvim-telescope/telescope.nvim', -- optional
   },
   config = function()
-    vim.keymap.set('n', '<leader>fb', ':Telescope git_branches<CR>', { desc = '[F]ind [B]ranch' })
+    vim.keymap.set('n', '<leader>ng', ':Neogit <CR>', { desc = 'Open [N]eo[G]it' })
     require('neogit').setup {}
   end,
 }
