@@ -307,7 +307,7 @@ require('lazy').setup({
   -- The dependencies are proper plugin specifications as well - anything
   -- you do for a plugin at the top level, you can do for a dependency.
   --
-  -- Use the `dependencies` key to specify the dependencies of a particular plugin
+  -- Use the `dependencies` key to specify the dependencies a particular plugin
 
   { -- Fuzzy Finder (files, lsp, etc)
     'nvim-telescope/telescope.nvim',
@@ -841,13 +841,6 @@ require('lazy').setup({
       --  - ci'  - [C]hange [I]nside [']quote
       require('mini.ai').setup { n_lines = 500 }
 
-      -- Add/delete/replace surroundings (brackets, quotes, etc.)
-      --
-      -- - saiw) - [S]urround [A]dd [I]nner [W]ord [)]Paren
-      -- - sd'   - [S]urround [D]elete [']quotes
-      -- - sr)'  - [S]urround [R]eplace [)] [']
-      require('mini.surround').setup()
-
       -- Simple and easy statusline.
       --  You could remove this setup call if you don't like it,
       --  and try some other statusline plugin
@@ -950,9 +943,11 @@ require('lazy').setup({
   require 'kickstart.plugins.trouble',
   require 'kickstart.plugins.vim-visual-multi',
   require 'kickstart.plugins.template-string',
+  -- require 'kickstart.plugins.surround',
   require 'kickstart.plugins.auto-session',
   require 'kickstart.plugins.neo-tree',
   require 'kickstart.plugins.harpoon',
+  require 'kickstart.plugins.flash',
   require 'kickstart.plugins.nvim-lsp-file-operations', -- update imports on file rename
 
   require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
