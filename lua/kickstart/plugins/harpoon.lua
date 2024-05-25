@@ -13,11 +13,11 @@ return {
       harpoon.ui:toggle_quick_menu(harpoon:list())
     end)
 
-    vim.keymap.set('n', '<Tab>', function()
-      harpoon:list():next { ui_nav_wrap = true }
-    end)
-    vim.keymap.set('n', '<S-Tab>', function()
-      harpoon:list():prev { ui_nav_wrap = true }
-    end)
+    -- vim.keymap.set('n', '<Tab>', function()
+    --   harpoon:list():next { ui_nav_wrap = true }
+    -- end)
+    -- vim.keymap.set('n', '<S-Tab>', function()
+    --   harpoon:list():prev { ui_nav_wrap = true }
+    -- end)
   end,
 }
